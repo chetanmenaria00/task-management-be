@@ -17,7 +17,7 @@ app.use(cors("*"));
 app.use("/api/users", userRoutes);
 app.use("/api/tasks", protect, taskRoutes);
 // Health
-app.get("health", (req, res) => {
+app.get("/health", (req, res) => {
   res.status(200).json({ code: 200, message: "Healthy" });
 });
 
